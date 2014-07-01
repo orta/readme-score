@@ -20,7 +20,7 @@ module ReadmeScore
       end
 
       def self.is_url?(possible_url)
-        !!(/https?:\/\//.match(possible_url))
+        possible_url.length > 255 || !!(/https?:\/\//.match(possible_url))
       end
 
       attr_accessor :response
